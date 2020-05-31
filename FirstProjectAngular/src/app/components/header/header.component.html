@@ -1,3 +1,32 @@
-<p>header works!</p>
+<!-- <p>header works!</p>
 <div>{{contador}}</div>
-<button (click)="aumentar()">Sumar contador</button>
+<button (click)="aumentar()">Sumar contador</button> -->
+
+<div>
+  <div>
+    <h2>Header</h2>
+  </div>
+  <div>
+    <p>contador</p>
+    <div>{{contador}}</div>
+    <div>
+      <button (click)="aumentar()">Suma a contador</button>
+    </div>
+  </div>
+  <div>
+    <h2>
+      Arreglo
+    </h2>
+  </div>
+  <div>
+    <p>Lista de arreglo</p>
+    <div>
+      <button (click)="add()">Agregar elemento a lista</button>
+    </div>
+    <div>
+      <ul>
+        <li *ngFor="let number of arr">{{number}}</li>
+      </ul>
+    </div>
+  </div>
+</div>

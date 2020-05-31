@@ -9,6 +9,7 @@ import { Component, OnInit  } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   contador = 0;
+  arr = [1,2,3,4,5,6,7,8,9];
 
   constructor() {
     console.log("Componente creandoce")
@@ -20,6 +21,10 @@ export class HeaderComponent implements OnInit {
 
   aumentar() {
     this.contador++;
+  }
+
+  add(){
+    this.arr.push((Math.random()*10));
   }
 
 }
