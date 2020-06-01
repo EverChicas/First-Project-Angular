@@ -3,16 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './components/Principal/app.component';
 
-import { NuevoComponent } from './components/nuevo-component/nuevo-component.component';
-import { MoviesComponent } from './components/movies/movies.component';
-import { HeaderComponent } from './components/header/header.component';
+import { UserComponent } from './components/user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NuevoComponent,
-    MoviesComponent,
-    HeaderComponent
+    UserComponent
   ],
   imports: [
     BrowserModule
