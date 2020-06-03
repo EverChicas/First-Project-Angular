@@ -8,7 +8,13 @@ import { Component } from '@angular/core';
 export class ApiserviceComponent {
 
   desactivado = true;
+  titulo: String = 'Vacio';
+  seleccion: String = "";
 
   constructor() { }
+
+  log(titulo){
+    console.log(titulo);
+  }
 
 }
