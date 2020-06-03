@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './components/Principal/app.component';
 
 import { UserComponent } from './components/user/user.component';
+import { ApiserviceComponent } from './services/apiservice/apiservice.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent
+    UserComponent,
+    ApiserviceComponent
   ],
   imports: [
     BrowserModule
