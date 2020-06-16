@@ -1,6 +1,25 @@
 
 <div>
-  <label for="Global">Datos globales</label>
-  <input type="text" id="Global"><br>
+  <h1>Consula a api de pokemon</h1>
+  <button (click)="consulta()">consulta</button>
+</div>
+
+<div *ngIf="_consulta.consulta">
+  <h2>Datos de pokemonAPI</h2>
+  <p>Numero de pokemones: {{_consulta.consulta.count}}</p>
+  <ul>
+    <li *ngFor="let item of _consulta.consulta.results"> {{item.name}}</li>
+  </ul>
+  <div>
+    <button (click)="irPrevious()" *ngIf="_consulta.consulta.previous" >Anteriores</button>
+  </div>
+  <br>
+  <div>
+    <button (click)="irNext()" *ngIf="_consulta.consulta.next">Siguientes</button>
+  </div>
+  <br>
+  <div>
+    <button (click)="consulta() " *ngIf="_consulta.consulta.previous">Inicio</button>
+  </div>
 </div>
 

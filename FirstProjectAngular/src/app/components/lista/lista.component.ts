@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-apiservice',
-  templateUrl: './apiservice.component.html',
-  styleUrls: ['./apiservice.component.css']
+  selector: 'app-lista',
+  templateUrl: './lista.component.html',
+  styleUrls: ['./lista.component.css']
 })
-export class ApiserviceComponent {
+export class ListaComponent {
 
   desactivado = true;
   titulo: String = 'Vacio';

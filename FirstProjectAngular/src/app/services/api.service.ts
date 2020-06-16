@@ -9,14 +9,19 @@ import { ConsultaResponse } from '../Interfaces/ConsulaResponse';
 })
 export class ApiService {
 
-  api_url: string = 'https://api.covid19api.com'
+  api_url: string = 'https://pokeapi.co/api/v2/pokemon-form'
 
   constructor(
     private _http: HttpClient
   ) { }
 
   consultar():Observable<ConsultaResponse>{
-      return this._http.get<ConsultaResponse>(`${this.api_url}/summary`)
+      return this._http.get<ConsultaResponse>(`${this.api_url}/`)
   }
+
+  consultarCustomer(url:string):Observable<ConsultaResponse>{
+    return this._http.get<ConsultaResponse>(`${url}`)
+  }
+
 
 }

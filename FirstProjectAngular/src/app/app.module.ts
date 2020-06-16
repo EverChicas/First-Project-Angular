@@ -5,19 +5,21 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './components/Principal/app.component';
 
 import { UserComponent } from './components/user/user.component';
-import { ApiserviceComponent } from './services/apiservice/apiservice.component';
 import { ConsultaComponent } from './components/consulta/consulta.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ListaComponent } from './components/lista/lista.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
-    ApiserviceComponent,
-    ConsultaComponent
+    ConsultaComponent,
+    ListaComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
