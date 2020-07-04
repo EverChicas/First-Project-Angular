@@ -20,4 +20,8 @@ export class AppComponent implements OnInit{
     .subscribe((datos: any[]) => this.usuarios = datos)
   }
 
+  // borrarUsuario(id: number){
+  //   this.usuarios = this.usuarios.filter(usuario => usuario.id != id)
+  // }
+
 }
