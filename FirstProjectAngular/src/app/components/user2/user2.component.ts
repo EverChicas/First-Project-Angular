@@ -17,9 +17,9 @@ export class User2Component {
 
   // @Output() borrar = new EventEmitter<number>()
 
-  BorrarUsuario(id: number){
-    // this.borrar.emit(id)
-    this._app.usuarios = this._app.usuarios.filter(usuario => usuario.id != id)
-  }
+  // BorrarUsuario(id: number){
+  //   // this.borrar.emit(id)
+  //   this._app.usuarios = this._app.usuarios.filter(usuario => usuario.id != id)
+  // }
 
 }
