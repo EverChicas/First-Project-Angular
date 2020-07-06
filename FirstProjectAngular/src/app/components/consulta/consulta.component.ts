@@ -1,9 +1,8 @@
 
 import { Component, OnInit } from '@angular/core';
-import { Pokemon, ConsultaResponse } from 'src/app/Interfaces/ConsulaResponse';
-import { ApiService } from 'src/app/services/api.service';
-import { UserService } from 'src/app/services/user.service';
-import { report } from 'process';
+import { Pokemon, ConsultaResponse } from '@interface/ConsulaResponse';
+import { ApiService } from '@services/api.service';
+import { UserService } from '@services/user.service';
 
 @Component({
   selector: 'app-consulta',
