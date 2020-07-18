@@ -9,6 +9,7 @@ import { ConsultaComponent } from '@components/consulta/consulta.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ListaComponent } from '@components/lista/lista.component';
 import { User2Component } from '@components/user2/user2.component';
+import { ExampleDirective } from './directives/example.directive';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { User2Component } from '@components/user2/user2.component';
     ConsultaComponent,
     ListaComponent,
     User2Component,
+    ExampleDirective,
   ],
   imports: [
     BrowserModule,
@@ -27,4 +29,5 @@ import { User2Component } from '@components/user2/user2.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

@@ -10,6 +10,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 export class AppComponent {
 
+  title: String = "Hola mundo";
   signupForm: FormGroup
 
   constructor(
