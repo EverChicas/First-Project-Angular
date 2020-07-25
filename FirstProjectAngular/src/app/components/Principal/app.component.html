@@ -38,3 +38,22 @@
   <!-- <span Example>{{title}}</span> -->
   <span Example underline="true" color="blue">{{title}}</span>
 </div>
+
+
+<div>
+  <h2>PIPES</h2>
+
+  <h3>pipe simple: (uppercase)</h3>
+  <div>{{ lista[0].nombre | uppercase }}</div>
+
+  <h3>pipe normal: (ordenar)</h3>
+  <ul>
+    <li *ngFor="let pelicula  of lista | sort">ID: {{ pelicula.id}}, Nombre: {{pelicula.nombre}}, Precio: {{pelicula.precio}}</li>
+  </ul>
+
+  <h3>pipe complejo:(ordenar con parametro)</h3>
+  <ul>
+    <li *ngFor="let pelicula  of lista | sortby:true">ID: {{ pelicula.id}}, Nombre: {{pelicula.nombre}}, Precio: {{pelicula.precio}}</li>
+  </ul>
+
+</div>

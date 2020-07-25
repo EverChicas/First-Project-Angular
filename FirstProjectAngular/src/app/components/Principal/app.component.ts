@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,6 +11,17 @@ export class AppComponent {
 
   title: String = "Hola mundo";
   signupForm: FormGroup
+
+  lista = [
+    {id:1, nombre:'Pacific Rim: Insurrecion', precio:6.89},
+    {id:2, nombre:'Black Panther', precio:5.90},
+    {id:3, nombre:'El corredor del laberinto: La cura mortal', precio:6.90},
+    {id:4, nombre:'Ready Player One', precio:8.60},
+    {id:5, nombre:'Vengadores: Infity war', precio:7.40},
+    {id:6, nombre:'Deadpool 2', precio:5.30},
+    {id:7, nombre:'Los Increibles 2', precio:5.70},
+    {id:8, nombre:'Hotel Transilvania 3: Unas vacaciones monstruosas', precio:5.00},
+  ]
 
   constructor(
     private _builder: FormBuilder

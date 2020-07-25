@@ -10,6 +10,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { ListaComponent } from '@components/lista/lista.component';
 import { User2Component } from '@components/user2/user2.component';
 import { ExampleDirective } from './directives/example.directive';
+import { UppercasePipe } from './pipes/uppercase.pipe';
+import { SortPipe } from './pipes/sort.pipe';
+import { SortbyPipe } from './pipes/sortby.pipe';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { ExampleDirective } from './directives/example.directive';
     ListaComponent,
     User2Component,
     ExampleDirective,
+    UppercasePipe,
+    SortPipe,
+    SortbyPipe,
   ],
   imports: [
     BrowserModule,
