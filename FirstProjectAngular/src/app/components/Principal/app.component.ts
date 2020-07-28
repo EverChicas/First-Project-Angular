@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { PaginacionService } from '@services/paginacion.service';
+import { UserPaginacion } from '@interface/ListaPagina';
+import { PageEvent } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +10,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit{
 
   title: String = "Hola mundo";
   signupForm: FormGroup
@@ -24,7 +27,8 @@ export class AppComponent {
   ]
 
   constructor(
-    private _builder: FormBuilder
+    private _builder: FormBuilder,
+    private _apiPaginacion: PaginacionService
   ) {
     this.signupForm = this._builder.group(
       {
@@ -33,14 +37,31 @@ export class AppComponent {
         email: ['', Validators.compose([Validators.email, Validators.required])],
         password: ['', Validators.required]
       }
-    )
+
+      )
   }
+
+  datos: UserPaginacion[] = []
+  page_size: number = 5
+  page_number: number = 1
+  pageSizeOptions = [5, 10, 30, 60, 100]
+
+  ngOnInit(): void {
+    this._apiPaginacion.getLista().subscribe(datos => this.datos = datos)
+  }
+
+  handlePage(e: PageEvent) {
+    this.page_size = e.pageSize
+    this.page_number = e.pageIndex + 1
+  }
+
 
   enviar(values){
     console.log(values)
   }
 
 }
+
 
 // CODIGO PARA @INPUT AND @OUTPUT DE DATA
 // export class AppComponent implements OnInit{

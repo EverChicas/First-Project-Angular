@@ -13,6 +13,10 @@ import { ExampleDirective } from './directives/example.directive';
 import { UppercasePipe } from './pipes/uppercase.pipe';
 import { SortPipe } from './pipes/sort.pipe';
 import { SortbyPipe } from './pipes/sortby.pipe';
+import { PaginatePipe } from './pipes/paginate.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -25,12 +29,15 @@ import { SortbyPipe } from './pipes/sortby.pipe';
     UppercasePipe,
     SortPipe,
     SortbyPipe,
+    PaginatePipe,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
